@@ -1,0 +1,92 @@
+<!-- Jacob Ockman
+     date April 2 2025
+      -->
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <!-- no time for css just yet but coming soon
+        <link rel="stylesheet" href="basic.css">
+        --> 
+    </head>
+    <script>
+        "use strict";
+
+        const favDay = prompt ("What is your favorite day of the week? (eg. Monday, Tuesday...)");
+
+        switch (favDay.toLowerCase()) {
+            case 'monday':
+                console.log("Wow, aren't you a go-getter! Hope you have a good week!");
+                alert("Wow, aren't you a go-getter! Hope you have a good week!");
+            break;
+            
+            case 'tuesday':
+                console.log("Yep, it's a day.");
+                alert("Yep, it's a day.");
+            break;
+
+            case 'wednesday':
+                console.log("HUMPDAY!!... You know, like a cammel hump, like a hill that you are getting over...");
+                alert("HUMPDAY!!... You know, like a cammel hump, like a hill that you are getting over...");
+            break;
+
+            case 'thursday':
+                console.log("last day before the to get any serious work done.");
+                alert("last day before the to get any serious work done.");
+            break;
+
+            case 'friday':
+                console.log("TGIF");
+                alert ("TGIF") ;
+        break;
+
+            case 'saturday':
+                console.log("The best day.");
+                alert("The best day.");
+            break;
+
+            case 'sunday':
+                console.log("The day to reset for the coming week ahead.");
+                alert("The day to reset for the coming week ahead.");
+            break;
+
+            default:
+                console.log("Uh, we don't have that day listed, but we do have these you can use. Monday Tuesday Wednsday Thursday Friday Saturday Sunday. Hope at least one of them are days you like.");
+                alert("Uh, we don't have that day listed, but we do have these you can use. Monday Tuesday Wednsday Thursday Friday Saturday Sunday. Hope at least one of them are days you like.");
+            
+        }
+
+    </script>
+
+    <body>
+        <h1>
+            When would you use a switch statement in your projects?
+        </h1>
+        <h3>
+        Answer
+        </h3>
+        <p>
+            You would use switch statments for when you 
+            need to have many different discrete options
+            that can be chosen by a variable or choice.
+        </p>
+
+    <!-- Comment to keep a template for ease of future use
+        <br>
+        <hr>
+        <br>
+
+        <h1>
+            Question
+        <p>
+            Answer
+        </p>
+        <p>
+            answer test
+        </p>
+        -->
+
+    </body>
+
+</html>
