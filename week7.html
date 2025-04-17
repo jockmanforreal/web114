@@ -1,0 +1,69 @@
+<!-- Jacob Ockman
+     date April 17 2025
+      -->
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <!-- no time for css just yet but coming soon
+        <link rel="stylesheet" href="basic.css">
+        --> 
+    </head>
+   
+    <script>
+        let username = prompt('What is you name?');
+
+         function calcGasAvg(){
+            
+            let count = 0;
+            let total = 0;
+            let weeklyGas = 0;
+
+            while (weeklyGas !== -1){
+                let weeklyGas1 = prompt('What is your weekly gass bill? Enter -1 when you are done.');
+                weeklyGas = parseFloat(weeklyGas1)
+                if (weeklyGas !== -1){
+                    total = total + weeklyGas;
+                    count = count + 1;
+                }
+           }
+           return total/count;
+        }
+
+        let gas = calcGasAvg();
+
+        confirm(username + "'s average weekls gas bill is " + gas.toFixed(2));
+
+
+
+    </script>
+
+    <body>
+        <h1>
+            What is the purpose of a function? 
+        </h1>
+        <p>
+                Answer
+        </p>
+        <p>
+        the purpose of functions is to reduce code duplication, make it easier for programmers to parse what is happening in a particular section, and increase modularity.
+        </p>
+
+    <!-- Comment to keep a template for ease of future use
+        <br>
+        <hr>
+        <br>
+
+        <h1>
+            Question
+        <p>
+            Answer
+        </p>
+        <p>
+            answer test
+        </p>
+        -->
+    </body>
+
+</html>
