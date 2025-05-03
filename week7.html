@@ -1,5 +1,5 @@
 <!-- Jacob Ockman
-     date April 17 2025
+     date April 30 2025
       -->
 <!DOCTYPE html>
 
@@ -10,46 +10,46 @@
         <link rel="stylesheet" href="basic.css">
         --> 
     </head>
+    
    
-    <script>
-        let username = prompt('What is you name?');
-
-         function calcGasAvg(){
-            
-            let count = 0;
-            let total = 0;
-            let weeklyGas = 0;
-
-            while (weeklyGas !== -1){
-                let weeklyGas1 = prompt('What is your weekly gass bill? Enter -1 when you are done.');
-                weeklyGas = parseFloat(weeklyGas1)
-                if (weeklyGas !== -1){
-                    total = total + weeklyGas;
-                    count = count + 1;
-                }
-           }
-           return total/count;
-        }
-
-        let gas = calcGasAvg();
-
-        confirm(username + "'s average weekls gas bill is " + gas.toFixed(2));
-
-
-
-    </script>
 
     <body>
         <h1>
-            What is the purpose of a function? 
+            Why is the JavaScript textContent property safer than innerHTML?
         </h1>
         <p>
                 Answer
         </p>
         <p>
-        the purpose of functions is to reduce code duplication, make it easier for programmers to parse what is happening in a particular section, and increase modularity.
+           textContent is safer becaus it only messes with the displayed writable text of the html in quesion. Where the innerHTML
+           can mess with all of the parts of the HTML. This makes textContent a little safer to play with because it can only change the text
+           where the innerHTML can chage both the text and how it is displayed.
         </p>
-
+        <br>
+        <hr>
+        <br>
+        <h1>
+            Explain the relationship between an HTML attribute and a corresponding DOM property 
+            (explain the connection to JavaScript).  Use a specific example in your answer
+        </h1>
+        <p>
+                Answer
+        </p>
+        <p>
+            An HTML attribute is a thing that describes what is going on in the HTML and how to display something on the screan. The DOM 
+            is a packaged portion of code that is made from the attributes with all of the other programming things attached to it.
+        </p>
+        <p>
+            So an attribute is for the programmer to look at and fiddle with, that then gets packaged up to make a DOM that has
+            all of the other nitt-gritty things that the web page needs for the webpage to happen. But, the programmer can still fiddle 
+            with the guts of the DOM by calling certain functions inside of it. 
+        </p>
+        <P>
+            an example is in this very webpage. The button below is described in the HTML using attributes like button, or id, or the
+            text inside the button. The DOM then pagages that up for the programes that make web pages happen, and then the button gets 
+            fiddeled with later with the getElementById function that is apart of the DOM process. 
+        </P>
+    
     <!-- Comment to keep a template for ease of future use
         <br>
         <hr>
@@ -64,6 +64,54 @@
             answer test
         </p>
         -->
+
+        <h1> 
+            To-Do List
+        </h1>
+        <input id="taskInput" tpye="text" placeholder="Enter Task Here">
+        <button id="addTaskBtn">Add Task</button>
+        <ul id="taskList">
+
+
+        </ul>
+        
+
     </body>
+
+    <script>
+        const addTaskBtn = document.getElementById("addTaskBtn");
+        const newTaskInput = document.getElementById("taskInput");
+        const taskList = document.getElementById("taskList");
+
+
+
+        addTaskBtn.addEventListener("click", function(){
+            
+            const newtask = newTaskInput.value.trim();
+
+            if (newtask === ""){
+                alert("Please enter an item.");
+                return;
+            }
+
+        const taskItem = document.createElement("li");
+        taskItem.textContent = newtask;
+
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "Delete";
+
+        deleteButton.addEventListener("click", function(){
+            taskList.removeChild(taskItem);
+
+        });
+        taskItem.appendChild(deleteButton);
+        taskList.appendChild(taskItem);
+        newTaskInput.Value = "";
+        newTaskInput.focus();
+
+        });
+
+
+    </script>
 
 </html>
