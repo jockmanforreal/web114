@@ -1,0 +1,66 @@
+<!-- Jacob Ockman
+     date May 12 2025
+      -->
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <link rel="stylesheet" href="final.css">
+    </head>
+        
+    
+    <body>
+        <div>
+            <h3>Question 1:</h3>
+            <p>
+                What can a function do?
+            </p>
+            <label><input type="radio" name="question1" data-response="Wrong">A gala or ball that those with means are able to donate funds.</label>
+            <label><input type="radio" name="question1" data-response="Correct">Be modular pieces of replicable code.</label>
+            <label><input type="radio" name="question1" data-response="Wrong">A particular action that a thing can do.</label>
+            <p></p>
+          </div>
+          
+          <br>
+          <hr>
+          <br>
+
+          <div>
+            <h3>Question 2:</h3>
+            <p>
+                How do you end a statement. 
+            </p>
+            <label><input type="radio" name="question2" data-response="Try again">With a period.</label>
+            <label><input type="radio" name="question2" data-response="Correct">With a semi-colon</label>
+            <label><input type="radio" name="question2" data-response="Try again">With time.</label>
+            <p></p>
+          </div>
+          
+          <br>
+          <hr>
+          <br>
+
+          <div>
+            <h3>Question 3:</h3>
+            <p>
+                In HTML what tag do you use to write java script code in.
+            </p>
+            <label><input type="radio" name="question3" data-response="Try again">head</label>
+            <label><input type="radio" name="question3" data-response="Try again">Body</label>
+            <label><input type="radio" name="question3" data-response="Correct">script</label>
+            <p></p>
+          </div>
+    </body>
+<script>
+        var radios = document.querySelectorAll("input");
+        radios.forEach((e) => e.addEventListener("click", respond));
+
+        function respond(evt) {
+        evt.target.parentElement.parentElement.lastElementChild.innerText = evt.target.dataset.response;
+        }
+</script>
+
+
+</html>
+
